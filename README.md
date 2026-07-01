@@ -406,11 +406,11 @@ Page 14
 
 # 16. Model Note
 
-This project uses **Google FLAN-T5 Base**, a lightweight instruction-tuned model selected to enable **fully local, offline inference** without external API dependencies.
+- This project uses **Google FLAN-T5 Base**, a lightweight instruction-tuned model selected to enable **fully local, offline inference** without external API dependencies.
 
-While the retrieval, validation, citation, and guardrail pipeline provides grounded evidence to the model, the final answer quality is naturally influenced by the capabilities of the underlying LLM. Smaller models may occasionally produce less consistent formatting or weaker reasoning for complex queries.
+- The retrieval, validation, citation, and guardrail pipeline provides grounded evidence to the model. Final answer quality is therefore influenced by the capabilities of the underlying LLM rather than the retrieval architecture itself.
 
-The overall architecture is intentionally **model-agnostic**, allowing the generation component to be replaced with stronger instruction-tuned models (such as Llama 3, Gemma, or Mistral) with minimal changes. This would significantly improve answer quality while preserving the same retrieval, validation, and citation pipeline.
+- The architecture is intentionally **model-agnostic**, allowing stronger instruction-tuned models (Llama 3, Gemma, Mistral, etc.) to replace the generation component with minimal code changes.
 
-The **Answer + Insights** mode uses a lightweight local FLAN-T5 model. While the retrieval pipeline provides grounded evidence and citations, the quality and formatting of generated insights are constrained by the capabilities of the local model. Replacing the local model with a stronger instruction-tuned LLM would significantly improve insight generation without requiring changes to the retrieval pipeline.
+- The **Answer + Insights** mode is more dependent on instruction-following ability. A stronger local or hosted LLM would significantly improve structured insight generation while preserving the same retrieval pipeline.
 ---
