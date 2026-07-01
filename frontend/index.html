@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Document Intelligence System</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- ========================================= -->
+        <!-- Hero -->
+        <!-- ========================================= -->
+
+        <header class="hero">
+
+            <h1>📄 Document Intelligence System</h1>
+
+            <p>
+                AI-powered Retrieval-Augmented Document Intelligence
+            </p>
+
+        </header>
+
+        <!-- ========================================= -->
+        <!-- Upload -->
+        <!-- ========================================= -->
+
+        <section class="card">
+
+            <h2>📤 Upload PDF Documents</h2>
+
+            <p class="subtitle">
+                Upload one or more PDF documents to build the searchable knowledge base.
+            </p>
+
+            <input
+                type="file"
+                id="pdfFiles"
+                multiple
+                accept=".pdf"
+            >
+
+            <button id="uploadBtn">
+
+                Upload Documents
+
+            </button>
+
+            <div id="uploadStatus"></div>
+
+        </section>
+
+        <!-- ========================================= -->
+        <!-- Query -->
+        <!-- ========================================= -->
+
+        <section class="card">
+
+            <h2>❓ Ask Questions</h2>
+
+            <p class="subtitle">
+                Ask questions grounded only in the uploaded documents.
+            </p>
+
+            <textarea
+
+                id="question"
+
+                rows="5"
+
+                placeholder="Example: What services does Microsoft Azure provide?"
+
+            ></textarea>
+
+            <div class="mode-selection">
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="mode"
+                        value="answer"
+                        checked
+                    >
+
+                    Answer
+
+                </label>
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="mode"
+                        value="answer_insights"
+                    >
+
+                    Answer + Insights
+
+                </label>
+
+            </div>
+
+            <button id="queryBtn">
+
+                Ask Question
+
+            </button>
+
+        </section>
+
+        <!-- ========================================= -->
+        <!-- Response -->
+        <!-- ========================================= -->
+
+        <section class="card">
+
+            <h2>🤖 Generated Response</h2>
+
+            <div id="answer">
+
+                Waiting for your first question...
+
+            </div>
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <h3>Confidence</h3>
+
+                    <span id="confidence">
+
+                        -
+
+                    </span>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <h3>Confidence Score</h3>
+
+                    <span id="confidenceScore">
+
+                        -
+
+                    </span>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <h3>Processing Time</h3>
+
+                    <span id="processingTime">
+
+                        -
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ========================================= -->
+        <!-- Citations -->
+        <!-- ========================================= -->
+
+        <section class="card">
+
+            <h2>📚 Source Citations</h2>
+
+            <p class="subtitle">
+
+                Retrieved document sections used for answer generation.
+
+            </p>
+
+            <div id="citations">
+
+                No citations available.
+
+            </div>
+
+        </section>
+
+        <!-- ========================================= -->
+        <!-- Footer -->
+        <!-- ========================================= -->
+
+        <footer>
+
+            Built with
+
+            <strong>
+
+                FastAPI • FAISS • Sentence Transformers • FLAN-T5
+
+            </strong>
+
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+# =========================
+# Backend
+# =========================
+fastapi
+uvicorn[standard]
+
+# =========================
+# Frontend (HTML Templates)
+# =========================
+jinja2
+python-multipart
+aiofiles
+
+# =========================
+# PDF Processing
+# =========================
+pymupdf
+
+# =========================
+# RAG Pipeline
+# =========================
+langchain
+langchain-community
+langchain-text-splitters
+
+# =========================
+# Embeddings
+# =========================
+sentence-transformers
+
+# =========================
+# Vector Store
+# =========================
+faiss-cpu
+
+# =========================
+# Local LLM
+# =========================
+transformers
+torch
+
+# =========================
+# Validation & Configuration
+# =========================
+pydantic
+python-dotenv
+
+# =========================
+# Utilities
+# =========================
+numpy
+pandas
+tqdm
+
+# =========================
+# Logging
+# =========================
+loguru
